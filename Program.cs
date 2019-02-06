@@ -19,56 +19,24 @@ namespace CopyLP05
             Console.WriteLine("ENTER DATE...type TUE25OCT17 ");
             Console.WriteLine("ENTER TIME...type 1000 ");
             Console.WriteLine("Found on Unit ?? type Tab - DA GEORGE3A ");
-            Console.WriteLine("GEORGE READY type MOP ON,29(If not loaded) ");
+            Console.WriteLine("GEORGE READY type MOP ON,27(If not loaded) ");
             Console.WriteLine("RESTORE - N ");
             Console.WriteLine("  ");
 
-            var myUniqueFileName1 = "C:\\em1904s\\data\\" + string.Format(@"{0}.txt", Guid.NewGuid());
-            var myUniqueFileName2 = "C:\\em1904s\\data\\" + string.Format(@"{0}.txt", Guid.NewGuid());
-            var myUniqueFileName3 = "C:\\em1904s\\data\\" + string.Format(@"{0}.txt", Guid.NewGuid());
-            var myUniqueFileName4 = "C:\\em1904s\\data\\" + string.Format(@"{0}.txt", Guid.NewGuid());
-            var myUniqueFileName5 = "C:\\em1904s\\data\\" + string.Format(@"{0}.txt", Guid.NewGuid());
-            var myUniqueFileName6 = "C:\\em1904s\\data\\" + string.Format(@"{0}.txt", Guid.NewGuid());
+            var myUniqueFileName1 = "C:\\em1900\\data\\" + string.Format(@"{0}.txt", Guid.NewGuid());
+            var myUniqueFileName2 = "C:\\em1900\\data\\" + string.Format(@"{0}.txt", Guid.NewGuid());
 
             using (StreamWriter w = File.AppendText(myUniqueFileName1))
             {
-                Log("C:\\em1904s\\data\\lp14.txt", w);
+                Log("C:\\em1900\\data\\lp14.txt", w);
             }
             using (StreamWriter w = File.AppendText(myUniqueFileName2))
             {
-                Log("C:\\em1904s\\data\\lp15.txt", w);
+                Log("C:\\em1900\\data\\lp15.txt", w);
             }
-            using (StreamWriter w = File.AppendText(myUniqueFileName3))
-            {
-                Log("C:\\em1904s\\data\\lp06.txt", w);
-            }
-            using (StreamWriter w = File.AppendText(myUniqueFileName4))
-            {
-                Log("C:\\em1904s\\data\\lp10.txt", w);
-            }
-            using (StreamWriter w = File.AppendText(myUniqueFileName5))
-            {
-                Log("C:\\em1904s\\data\\lp11.txt", w);
-            }
-            using (StreamWriter w = File.AppendText(myUniqueFileName6))
-            {
-                Log("C:\\em1904s\\data\\lp12.txt", w);
-            }
-            try
-            {
-                File.Delete("C:\\em1904s\\data\\lp14.txt");
-                File.Delete("C:\\em1904s\\data\\lp15.txt");
-                File.Delete("C:\\em1904s\\data\\lp06.txt");
-                File.Delete("C:\\em1904s\\data\\lp10.txt");
-                File.Delete("C:\\em1904s\\data\\lp11.txt");
-                File.Delete("C:\\em1904s\\data\\lp12.txt");
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
+
             Console.WriteLine(" ");
-            Console.WriteLine("LP Print Files now Deleted ");
+            Console.WriteLine("LP Print Files Copied ");
 
         }
 
@@ -97,6 +65,7 @@ namespace CopyLP05
             {
                 Console.WriteLine(ex.Message);
             }
+            File.Delete(filename1);
         }
 
     }
